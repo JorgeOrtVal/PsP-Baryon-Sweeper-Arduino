@@ -44,18 +44,17 @@ Serial1.begin(19200, SERIAL_8E2);
 
 | Component | Notes |
 |-----------|-------|
-| **Arduino Leonardo** (or compatible ATmega32U4 board) | ✅ Tested and confirmed working |
-| **10kΩ resistor** (1/4W) | For the K-line adapter |
+| **Arduino Leonardo** | ✅ Tested and confirmed working |
+| **10kΩ resistor** | For the K-line adapter |
 | **Jumper wires** (male-female) | 3 wires |
 | **PSP 3000** (or other bricked PSP) | Any model with K-line accessible |
-| **Memory Stick** (Pro Duo) | At least 32MB |
+| **Memory Stick** | At least 32MB |
 | **PSP AC charger** | Required to power the PSP during unbrick |
 | **USB cable** | To connect Arduino to PC |
 
 ### ❌ NOT Required
 
-- ~~1N4148 diode~~ (not needed with `SERIAL_8E2`)
-- ~~Arduino M0 / 3.3V board~~
+- ~~1N4148 diode~~
 - ~~Soldering iron~~
 - ~~USB-TTL converter~~
 

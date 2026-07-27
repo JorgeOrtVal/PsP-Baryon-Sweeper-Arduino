@@ -1,11 +1,11 @@
 // =============================================================
-//  Baryon Sweeper — Arduino Leonardo K-Line Bridge
+//  Baryon Sweeper — Arduino (Tested only on Arduino Leonardo) K-Line Bridge
 //  =============================================================
-//  Part of the PsP-Baryon-Sweeper-ArduinoLeonardo project
+//  Part of the PsP-Baryon-Sweeper-Arduino project
 //
 //  This sketch bridges pysweeper (PC) ↔ PSP Syscon (K-line)
-//  using an Arduino Leonardo.
-//
+//  using an Arduino (Tested only on Arduino Leonardo).
+// 
 //  🔑 THE KEY FIX: SERIAL_8E2
 //  ============================
 //  Serial1.begin() defaults to 8N1 (8 bits, No parity, 1 stop).
@@ -18,17 +18,14 @@
 //
 //  🔌 WIRING
 //  =========
-//                 10kΩ
-//  TX (pin 1) ──┬──[====]── RX (pin 0) ── K-line (center PSP)
-//                │
-//  GND          ─────────────────────────── PSP negative (-)
-//  3.3V         ─────────────────────────── PSP positive (+)*
-//
-//  * Optional — the PSP is powered by its AC charger.
+//                 
+//  TX (pin 1) ────[10kΩ]── RX (pin 0) ── K-line (center PSP)
+//  GND ──────────────────────────────────── PSP negative (-)
+//  3.3V ─────────────────────────────────── PSP positive (+)
 //
 //  🖥️ USE WITH pysweeper
 //  ======================
-//  1. Upload this sketch to Arduino Leonardo
+//  1. Upload this sketch to Arduino (Tested only on Arduino Leonardo)
 //  2. Close Arduino IDE (Serial Monitor locks the port)
 //  3. Open pysweeper.py → Select COM port → Service Mode → Start
 //  4. Connect wires to PSP with AC charger + Magic Memory Stick
@@ -38,13 +35,10 @@
 
 void setup() {
   Serial.begin(19200);
-  // ⚠️ CRITICAL: PSP Syscon uses 8E2 (Even parity, 2 stop bits)
-  //    Without this, communication fails and the PSP loops forever.
   Serial1.begin(19200, SERIAL_8E2);
 }
 
 void loop() {
-  // PC → PSP (USB → K-line)
   if (Serial.available() > 0) {
     size_t len = Serial.available();
     uint8_t buf[64];
@@ -53,7 +47,6 @@ void loop() {
     Serial1.flush();
   }
 
-  // PSP → PC (K-line → USB)
   if (Serial1.available() > 0) {
     size_t len = Serial1.available();
     uint8_t buf[64];

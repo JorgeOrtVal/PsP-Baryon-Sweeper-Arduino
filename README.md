@@ -36,8 +36,6 @@ The key insight was discovering that **`Serial1.begin(19200)` defaults to 8N1** 
 Serial1.begin(19200, SERIAL_8E2);
 ```
 
-The **Arduino Leonardo works perfectly at 5V** — no diode, no M0, no extra components needed.
-
 > 🔬 **Why this matters:** The 1N4148 diode was a workaround for signal contention caused by mismatched UART framing. Fix the framing → fix the communication.
 
 ---

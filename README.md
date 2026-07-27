@@ -16,8 +16,6 @@
   - [3. Prepare the Memory Stick](#3-prepare-the-memory-stick)
   - [4. Run Baryon Sweeper](#4-run-baryon-sweeper)
 - [Repository Contents](#repository-contents)
-- [Troubleshooting](#troubleshooting)
-- [Credits](#credits)
 - [License](#license)
 
 ---
@@ -164,66 +162,6 @@ PsP-Baryon-Sweeper-ArduinoLeonardo/
     ├── run_windows_debug_py3.bat     ← Launch with python3 debug
     └── Readme.md                     ← Original DC-ARK Maker readme
 ```
-
----
-
-## Troubleshooting
-
-### "No port echo detected"
-
-pysweeper sends a test string and expects to read it back. If your circuit is correct, this means:
-- Check that **TX and RX are jumpered** through the 10kΩ resistor
-- Check that the correct **COM port** is selected
-- Close the Arduino IDE's **Serial Monitor** (it locks the port)
-
-### "5A 02 01 A2" loop / service not progressing
-
-This is the Syscon repeatedly asking for authentication but not getting a valid response. The fix is using **`SERIAL_8E2`** — verify your sketch has:
-```cpp
-Serial1.begin(19200, SERIAL_8E2);
-```
-
-### "PermissionError: Access denied" / COM port busy
-
-- Close any other programs using the COM port (Arduino IDE, Putty, etc.)
-- Unplug and re-plug the Arduino
-- Try a different USB port
-
-### The orange LED blinks but nothing happens
-
-- Make sure the **Memory Stick** is properly prepared with DC-ARK
-- Make sure the PSP is connected to its **AC charger** (USB power may not be enough)
-- Try **Normal Boot** mode instead of Service Mode
-
-### "could not open port COM8: PermissionError(13, 'Acceso denegado')"
-
-On Windows, another program has the port open. Close:
-- Arduino IDE (especially Serial Monitor)
-- Any terminal emulator (Putty, screen, etc.)
-- Then unplug and reconnect the Arduino
-
----
-
-## Credits
-
-🙏 This project builds upon the incredible work of many people in the PSP homebrew community:
-
-| Person | Contribution |
-|--------|-------------|
-| **khubik** | Baryon Sweeper emulator code, GUI design |
-| **Proxima** | Syscon authentication response generator |
-| **M4j0r** | Syscon voltage fault injection glitch |
-| **Wildcard** | Syscon glitching and dumping |
-| **Yoti** | PSP 3000 unbrick PoC, PSPx contributions |
-| **ErikPshat** | JigKick memcard clone, MSID dumping guides |
-| **zecoxao** | decrypt-sp & decrypt-os2 PC ports |
-| **dogecore** | Authentication script porting, threading fix |
-| **lolivera** | PSP 3000 unbrick PoC, TA-095 testing |
-| **Boryan, lport3, dx3d** | Battery communication dumps and protocol reversal |
-
-And the original `SERIAL_8E2` discovery during the development of this very repository.
-
----
 
 ## License
 

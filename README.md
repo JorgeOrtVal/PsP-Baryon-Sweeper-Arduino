@@ -1,4 +1,4 @@
-# 🎮 PsP Baryon Sweeper — Arduino Leonardo
+# PsP Baryon Sweeper — Arduino Leonardo
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 
@@ -22,14 +22,11 @@
 
 ## What is this?
 
-🧠 This repository contains everything you need to **unbrick a PSP 3000** (or other PSP models) using an **Arduino Leonardo**.
+This repository contains everything you need to **unbrick a PSP 3000** (or other PSP models) using an **Arduino Leonardo**.
 
 ### The Problem
 
-When a PSP gets bricked (corrupted firmware), the Syscon chip enters a special **service mode** waiting for authentication. The standard approach requires:
-
-- A **1N4148 diode** to prevent signal contention between the Arduino and the PSP
-- OR a 3.3V microcontroller like an Arduino M0
+When a PSP gets bricked (corrupted firmware), the Syscon chip enters a special **service mode** waiting for authentication. The standard approach requires a **1N4148 diode** to prevent signal contention between the Arduino and the PSP
 
 ### The Solution
 

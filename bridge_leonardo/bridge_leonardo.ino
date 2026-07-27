@@ -22,7 +22,7 @@
 //  TX (pin 1) ──┬──[====]── RX (pin 0) ── K-line (center PSP)
 //                │
 //  GND          ─────────────────────────── PSP negative (-)
-//  5V           ─────────────────────────── PSP positive (+)*
+//  3.3V         ─────────────────────────── PSP positive (+)*
 //
 //  * Optional — the PSP is powered by its AC charger.
 //

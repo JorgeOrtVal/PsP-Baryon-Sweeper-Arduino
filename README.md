@@ -1,8 +1,8 @@
-# PsP Baryon Sweeper — Arduino Leonardo
+# PsP Baryon Sweeper — Arduino (Tested only on Arduino Leonardo)
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 
-> **Unbrick your PSP 3000 using an Arduino Leonardo** — no expensive hardware, no rare diodes, no soldering wizardry required.
+> **Unbrick your PSP 3000 using an Arduino (Tested only on Arduino Leonardo)** — no expensive hardware, no rare diodes, no soldering wizardry required.
 
 ---
 
@@ -22,7 +22,7 @@
 
 ## What is this?
 
-This repository contains everything you need to **unbrick a PSP 3000** (or other PSP models) using an **Arduino Leonardo**.
+This repository contains everything you need to **unbrick a PSP 3000** (or other PSP models) using an **Arduino (Tested only on Arduino Leonardo)**.
 
 ### The Problem
 
@@ -44,7 +44,7 @@ Serial1.begin(19200, SERIAL_8E2);
 
 | Component | Notes |
 |-----------|-------|
-| **Arduino Leonardo** | ✅ Tested and confirmed working |
+| **Arduino (Tested only on Arduino Leonardo)** | ✅ Tested and confirmed working |
 | **10kΩ resistor** | For the K-line adapter |
 | **Jumper wires** (male-female) | 3 wires |
 | **PSP 3000** (or other bricked PSP) | Any model with K-line accessible |
@@ -66,14 +66,12 @@ Serial1.begin(19200, SERIAL_8E2);
 
 1. Install **Arduino IDE** https://docs.arduino.cc/software/ide/
 2. Open **bridge_leonardo/bridge_leonardo.ino**
-3. Select **Arduino Leonardo** on the correct **COM port**
+3. Select **Arduino (Tested only on Arduino Leonardo)** on the correct **COM port**
 5. Press **Upload** (→)
 
 ### 2. Wire the Circuit
 
 ```
-   Arduino Leonardo                    PSP
-   ═══════════════════                 ═════
    TX (pin 1) ──┬──[10kΩ]── RX (pin 0) ── K-line (center pin)
                  │
    GND          ──────────────────────── PSP negative (-)
@@ -126,7 +124,7 @@ You need a **Magic Memory Stick** with DC-ARK (ARK-4) firmware.
 ## Repository Contents
 
 ```
-PsP-Baryon-Sweeper-ArduinoLeonardo/
+PsP-Baryon-Sweeper-Arduino/
 ├── bridge_leonardo/                  
 │   └── bridge_leonardo.ino           ← Arduino sketch
 │

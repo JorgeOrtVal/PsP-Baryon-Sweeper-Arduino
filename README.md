@@ -6,7 +6,7 @@
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [What is this?](#what-is-this)
 - [Hardware Requirements](#hardware-requirements)
@@ -22,9 +22,9 @@
 
 ---
 
-## 🧠 What is this?
+## What is this?
 
-This repository contains everything you need to **unbrick a PSP 3000** (or other PSP models) using an **Arduino Leonardo**.
+🧠 This repository contains everything you need to **unbrick a PSP 3000** (or other PSP models) using an **Arduino Leonardo**.
 
 ### The Problem
 
@@ -47,7 +47,7 @@ The **Arduino Leonardo works perfectly at 5V** — no diode, no M0, no extra com
 
 ---
 
-## 🔧 Hardware Requirements
+## Hardware Requirements
 
 | Component | Notes |
 |-----------|-------|
@@ -68,7 +68,7 @@ The **Arduino Leonardo works perfectly at 5V** — no diode, no M0, no extra com
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Upload the Sketch
 
@@ -135,12 +135,12 @@ See the [ARK-4 GitHub repository](https://github.com/PSP-Archive/ARK-4) for manu
 6. **Connect the PSP:**
    - Insert the **prepared Memory Stick** into the PSP
    - Connect the PSP to its **AC charger**
-   - Connect the 3 wires (K-line, GND, and optionally 5V) to the PSP battery terminals
+   - Connect the 3 wires (K-line, GND, and optionally 3.3V) to the PSP battery terminals
 7. The PSP should **power on automatically** and boot from the Memory Stick 🎉
 
 ---
 
-## 📁 Repository Contents
+## Repository Contents
 
 ```
 PsP-Baryon-Sweeper-ArduinoLeonardo/
@@ -167,7 +167,7 @@ PsP-Baryon-Sweeper-ArduinoLeonardo/
 
 ---
 
-## 🔍 Troubleshooting
+## Troubleshooting
 
 ### "No port echo detected"
 
@@ -204,9 +204,9 @@ On Windows, another program has the port open. Close:
 
 ---
 
-## 🙏 Credits
+## Credits
 
-This project builds upon the incredible work of many people in the PSP homebrew community:
+🙏 This project builds upon the incredible work of many people in the PSP homebrew community:
 
 | Person | Contribution |
 |--------|-------------|
@@ -225,9 +225,9 @@ And the original `SERIAL_8E2` discovery during the development of this very repo
 
 ---
 
-## ⚖️ License
+## License
 
-This project is licensed under the **GNU General Public License v3.0**. See the [LICENSE](LICENSE) file for details.
+⚖️ This project is licensed under the **GNU General Public License v3.0**. See the [LICENSE](LICENSE) file for details.
 
 ---
 
